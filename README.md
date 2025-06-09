@@ -19,5 +19,11 @@ Ensure your listener is active on your attacker machine:
 nc -lvnp 9876
 ```
 
+## References
+* https://lolbas-project.github.io/lolbas/Binaries/Regasm/
+* https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/
+* https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/
+* https://attack.mitre.org/techniques/T1218/
+
 ## Disclaimer
 RegAsmGhost is intended for authorized security testing and educational purposes only. Unauthorized use is strictly prohibited. The author is not responsible for any misuse or damage caused by this tool.
